@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="header_container">
+    <div class="header">
+      <div class="black_overlay">
+        <div class="title_container">
+          <div class="portrait"></div>
+          <div class="title">Francis Phan</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function init(){
+	window.addEventListener('scroll', function(e){
+		if(window.pageYOffset > 156){
+			$('.header_container').addClass('shrink_header');
+			$('.title').addClass('shrink_title');
+      $('.portrait').addClass('shrink_portrait');
+		}
+		else{
+			if($('.header_container').hasClass('shrink_header')){
+				$('.header_container').removeClass('shrink_header');
+			}
+			if($('.title').hasClass('shrink_title')){
+				$('.title').removeClass('shrink_title');
+			}
+
+			if($('.portrait').hasClass('shrink_portrait')){
+				$('.portrait').removeClass('shrink_portrait');
+			}
+
+		}
+	});
+}
+window.onload = init();
+</script>

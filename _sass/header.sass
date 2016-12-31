@@ -1,0 +1,66 @@
+// Styling for the header/navbar
+
+@import 'global_variables'
+
+
+*
+  padding: 0
+  margin: 0
+
+.header_container
+  z-index: 9999
+  position: fixed
+  width: 100%
+  background: #222
+  height: 200px
+  left: 0
+  border-bottom: solid $primary_color 10px
+  transition: all .5s ease-in-out
+
+.header
+  background: url('../images/dubois_cloud_coverage.jpg') no-repeat black
+  background-size: cover
+  background-position: bottom
+  height: 100%
+  margin-left: auto
+  margin-right: auto
+  padding: 0
+  margin: 0
+
+.title
+  color: rgba(white, .8)
+  font-size: 72px
+  vertical-align: middle
+  transition: all .5s ease-in-out
+
+.black_overlay
+  height: 100%
+  background: rgba(black, .6)
+  .title_container
+    padding: 20px
+
+
+.portrait
+  border-radius: 100px
+  border: solid rgba(white, .7) 3px
+  background: url('../images/portrait.jpg') no-repeat black
+  background-size: cover
+  background-position: bottom
+  height: 120px
+  width: 120px
+  transition: all .5s ease-in-out
+
+.portrait, .title
+  display: inline-block
+  vertical-align: middle
+  padding: 10px
+
+.shrink_header
+  height: 100px
+
+.shrink_title
+  font-size: 36px
+
+.shrink_portrait
+  height: 50px
+  width: 50px
