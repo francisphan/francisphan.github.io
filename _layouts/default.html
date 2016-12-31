@@ -2,8 +2,13 @@
 <html>
   {% include head.html %}
   <body>
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
+    <div class="side_bio_container">
+      {% include side_bio.html %}
+    </div>
+    <div class="main_content_container">
+      {{ content }}
+    </div>
+    <div class="gap_container">
+    </div>
   </body>
 </html>
