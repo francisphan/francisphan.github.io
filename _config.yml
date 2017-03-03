@@ -23,8 +23,7 @@ github_username:  francisphan
 # Build settings
 markdown: kramdown
 theme: minima
-gems:
-  - jekyll-feed
+gems: [jekyll-feed, jekyll-coffeescript, jekyll-minifier]
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -32,6 +31,3 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
-
-gems:
- - jekyll-coffeescript
