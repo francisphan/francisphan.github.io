@@ -3,23 +3,16 @@ layout: default
 title: Francis Phan Photography
 ---
 
-<div class="home-featured">
-  <h2>Featured Photography</h2>
-
-  <div class="featured-grid">
-    {% for album in site.data.galleries limit:4 %}
-      <div class="featured-album">
-        <a href="/gallery/{{ album.slug }}/">
-          <img src="{{ album.featured_image }}" alt="{{ album.name }}">
-          <div class="featured-overlay">
-            <h3>{{ album.name }}</h3>
-          </div>
-        </a>
+{% for album in site.data.galleries %}
+<div id="{{ album.slug }}" class="location-section">
+  <div class="location-grid">
+    <a href="/gallery/{{ album.slug }}/">
+      <img src="{{ album.featured_image }}" alt="{{ album.name }}">
+      <div class="location-overlay">
+        <h3>{{ album.name }}</h3>
+        <p>{{ album.description }}</p>
       </div>
-    {% endfor %}
-  </div>
-
-  <div class="cta-button">
-    <a href="/gallery/" class="btn-primary">View All Galleries</a>
+    </a>
   </div>
 </div>
+{% endfor %}
