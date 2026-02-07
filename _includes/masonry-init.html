@@ -1,0 +1,21 @@
+<script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="/assets/js/masonry.pkgd.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var grid = document.querySelector('.masonry-grid');
+
+  if (grid) {
+    var masonry = new Masonry(grid, {
+      itemSelector: '.masonry-item',
+      columnWidth: '.masonry-item',
+      percentPosition: true,
+      gutter: 15
+    });
+
+    // Re-layout after images load
+    imagesLoaded(grid).on('progress', function() {
+      masonry.layout();
+    });
+  }
+});
+</script>

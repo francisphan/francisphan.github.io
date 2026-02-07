@@ -31,3 +31,16 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
+
+# Collections for photo galleries
+collections:
+  photos:
+    output: true
+    permalink: /gallery/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "photos"
+    values:
+      layout: "photo-album"

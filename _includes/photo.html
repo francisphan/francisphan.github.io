@@ -1,0 +1,14 @@
+<a href="{{ include.full }}"
+   class="masonry-item"
+   data-pswp-width="{{ include.width }}"
+   data-pswp-height="{{ include.height }}"
+   target="_blank">
+  <img src="{{ include.thumb }}"
+       alt="{{ include.alt }}"
+       loading="lazy" />
+  {% if include.caption %}
+    <div class="pswp-caption-content photo-caption">
+      {{ include.caption }}
+    </div>
+  {% endif %}
+</a>

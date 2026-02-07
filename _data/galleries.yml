@@ -1,0 +1,14 @@
+- name: "Landscape Photography"
+  slug: "landscape"
+  description: "Wide vistas and natural beauty"
+  featured_image: "/images/landscape/featured.jpg"
+
+- name: "Portrait Photography"
+  slug: "portrait"
+  description: "People and expressions"
+  featured_image: "/images/portrait/featured.jpg"
+
+- name: "Urban Photography"
+  slug: "urban"
+  description: "City life and architecture"
+  featured_image: "/images/urban/featured.jpg"

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="gallery-overview">
+  <h1 class="gallery-title">{{ page.title }}</h1>
+  <div class="album-grid">
+    {% for album in site.data.galleries %}
+      <div class="album-card">
+        <a href="/gallery/{{ album.slug }}/">
+          <div class="album-cover" style="background-image: url('{{ album.featured_image }}')"></div>
+          <div class="album-info">
+            <h3>{{ album.name }}</h3>
+            <p>{{ album.description }}</p>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,230 @@
+@import 'global_variables'
+
+// Gallery Overview
+.gallery-overview
+  padding: 0
+  width: 100%
+
+.gallery-title
+  text-align: center
+  font-size: 2.5em
+  margin: 40px 0
+  color: $primary_color
+
+// Album Cards Grid
+.album-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))
+  gap: 30px
+  padding: 5%
+
+.album-card
+  background: white
+  border-radius: 8px
+  overflow: hidden
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1)
+  transition: all 0.3s ease
+  cursor: pointer
+
+  &:hover
+    transform: translateY(-8px)
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15)
+
+  a
+    text-decoration: none
+    color: inherit
+
+.album-cover
+  width: 100%
+  height: 250px
+  background-size: cover
+  background-position: center
+
+.album-info
+  padding: 20px
+
+  h3
+    margin: 0 0 10px 0
+    color: $primary_color
+
+  p
+    margin: 0
+    color: #666
+    font-size: 0.9em
+
+// Masonry Grid Layout
+.masonry-grid
+  padding: 2%
+
+.masonry-item
+  width: 32%
+  margin-bottom: 15px
+  cursor: pointer
+  overflow: hidden
+  border-radius: 4px
+  transition: transform 0.3s ease
+
+  &:hover
+    transform: scale(1.02)
+
+  img
+    width: 100%
+    height: auto
+    display: block
+
+.photo-caption
+  display: none  // Hidden until shown in lightbox
+
+// Album Header
+.album-header
+  text-align: center
+  padding: 40px 5%
+  background: linear-gradient(135deg, lighten($primary_color, 40%), lighten($primary_color, 30%))
+
+  h1
+    margin: 0 0 15px 0
+    color: white
+    font-size: 2.5em
+
+  p
+    margin: 0
+    color: rgba(255,255,255,0.9)
+    font-size: 1.1em
+
+// Photo Album Container
+.photo-album
+  width: 100%
+  margin: 0
+  padding: 0
+
+// Home Featured Section
+.home-featured
+  padding: 5%
+
+  h2
+    text-align: center
+    font-size: 2.5em
+    margin: 40px 0
+    color: $primary_color
+
+.featured-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  gap: 25px
+  margin-bottom: 40px
+
+.featured-album
+  position: relative
+  overflow: hidden
+  border-radius: 8px
+  cursor: pointer
+
+  &:hover
+    .featured-overlay
+      opacity: 1
+
+  img
+    width: 100%
+    height: 300px
+    object-fit: cover
+    display: block
+    transition: transform 0.3s ease
+
+  &:hover img
+    transform: scale(1.05)
+
+.featured-overlay
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent)
+  padding: 20px
+  opacity: 0.9
+  transition: opacity 0.3s ease
+
+  h3
+    margin: 0
+    color: white
+    font-size: 1.5em
+
+.cta-button
+  text-align: center
+  margin-top: 40px
+
+  a
+    display: inline-block
+    padding: 15px 40px
+    background: $primary_color
+    color: white
+    text-decoration: none
+    border-radius: 8px
+    font-size: 1.1em
+    transition: all 0.3s ease
+
+    &:hover
+      background: darken($primary_color, 10%)
+      transform: translateY(-2px)
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2)
+
+// Responsive Design
+@media (max-width: 1024px)
+  .side_bio_container
+    transform: translateX(-100%)
+    transition: transform 0.3s ease
+
+    &.open
+      transform: translateX(0)
+
+  .main_content_container
+    width: 100%
+    margin-left: 0
+
+  .masonry-item
+    width: 48%
+
+  .album-grid
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+    padding: 3%
+
+@media (max-width: 768px)
+  .masonry-item
+    width: 48%
+    margin-bottom: 10px
+
+  .album-grid
+    grid-template-columns: 1fr
+    gap: 20px
+    padding: 5%
+
+  .gallery-title
+    font-size: 2em
+
+  .album-header h1
+    font-size: 2em
+
+  .featured-grid
+    grid-template-columns: 1fr
+    gap: 20px
+
+  .home-featured h2
+    font-size: 2em
+
+@media (max-width: 480px)
+  .masonry-item
+    width: 100%
+
+  .gallery-title
+    font-size: 1.8em
+
+  .album-header
+    padding: 30px 5%
+
+    h1
+      font-size: 1.8em
+
+    p
+      font-size: 1em
+
+  .home-featured h2
+    font-size: 1.8em

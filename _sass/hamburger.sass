@@ -1,0 +1,37 @@
+@import 'global_variables'
+
+.hamburger-menu
+  display: none
+  position: fixed
+  top: 20px
+  left: 20px
+  z-index: 1000
+  background: $primary_color
+  padding: 15px
+  border-radius: 8px
+  cursor: pointer
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3)
+
+  span
+    display: block
+    width: 25px
+    height: 3px
+    background: white
+    margin: 5px 0
+    transition: 0.3s
+    border-radius: 2px
+
+  &:hover
+    background: darken($primary_color, 10%)
+
+@media (max-width: 1024px)
+  .hamburger-menu
+    display: block
+
+  .side_bio_container
+    z-index: 999
+    position: fixed
+    left: 0
+    top: 0
+    height: 100vh
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3)

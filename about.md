@@ -1,15 +1,32 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+<div class="main_content">
+  <h1>About Me</h1>
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+  <p>Francis Phan - Photographer capturing moments through landscapes, portraits, and urban scenes.</p>
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+  <h2>Photography Philosophy</h2>
+
+  <p>Photography is about capturing fleeting moments and transforming them into lasting memories. Whether it's the golden light of a sunset over a mountain range, the authentic emotion in a portrait, or the hidden beauty in everyday urban scenes, I strive to tell stories through my lens.</p>
+
+  <h2>Camera Gear</h2>
+
+  <ul>
+    <li>Camera body: [Your camera model]</li>
+    <li>Lenses: [Your lens collection]</li>
+    <li>Accessories: [Your essential gear]</li>
+  </ul>
+
+  <h2>Contact</h2>
+
+  <p>For print inquiries, licensing, or commissions, please reach out via social media links in the sidebar.</p>
+
+  <div class="contact-links">
+    <a href="https://www.instagram.com/phancis/" target="_blank">Instagram</a> |
+    <a href="https://www.flickr.com/photos/fxphancis/" target="_blank">Flickr</a>
+  </div>
+</div>
