@@ -160,7 +160,6 @@ For issues or questions about:
 
 - **Website**: https://francisphan.info
 - **Instagram**: [@phancis](https://www.instagram.com/phancis/)
-- **Flickr**: [fxphancis](https://www.flickr.com/photos/fxphancis/)
 - **GitHub**: [@francisphan](https://github.com/francisphan/)
 
 ---
