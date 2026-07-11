@@ -1,13 +1,12 @@
 ---
 layout: default
-title: Francis Phan Photography
 ---
 
 {% for album in site.data.galleries %}
 <div id="{{ album.slug }}" class="location-section">
   <div class="location-grid">
     <a href="/gallery/{{ album.slug }}/">
-      <img src="{{ album.featured_image }}" alt="{{ album.name }}">
+      <img src="{{ album.featured_image }}" alt="{{ album.name }}" loading="lazy">
       <div class="location-overlay">
         <h3>{{ album.name }}</h3>
         <p>{{ album.description }}</p>
@@ -16,3 +15,8 @@ title: Francis Phan Photography
   </div>
 </div>
 {% endfor %}
+
+<div class="projects-teaser">
+  <a href="/projects/"><span class="term-prompt">$</span> cd ~/projects</a>
+  <p class="teaser-sub">The software side of this site</p>
+</div>

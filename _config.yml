@@ -16,7 +16,7 @@
 title: Francis Phan
 email: fphan@umass.edu
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "francisphan.info" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://francisphan.info" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: phancis
 github_username:  francisphan
 
@@ -27,6 +27,13 @@ gems: [jekyll-feed, jekyll-coffeescript, jekyll-minifier]
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - IMPLEMENTATION_COMPLETE.md
+  - QUICK_START.md
+  - TRANSFORMATION_SUMMARY.md
+  - VERIFICATION_CHECKLIST.md
+  - SITE_STRUCTURE.txt
+  - favicon.psd
 
 sass:
   sass_dir: _sass
@@ -44,3 +51,4 @@ defaults:
       type: "photos"
     values:
       layout: "photo-album"
+      banner: false

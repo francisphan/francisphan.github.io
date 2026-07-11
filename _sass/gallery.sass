@@ -1,5 +1,48 @@
 @import 'global_variables'
 
+// Homepage location sections — one full-width tile per album, anchor targets
+// for the sidebar links
+.location-section
+  scroll-margin-top: 20px
+
+.location-grid
+  position: relative
+  overflow: hidden
+  a
+    display: block
+    position: relative
+  img
+    display: block
+    width: 100%
+    height: 72vh
+    object-fit: cover
+    transition: transform 0.6s ease
+  a:hover img
+    transform: scale(1.03)
+
+.location-overlay
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 32px 36px
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent)
+  h3
+    color: white
+    font-size: 2em
+    margin-bottom: 4px
+  p
+    color: rgba(255,255,255,0.85)
+    font-size: 1em
+
+@media (max-width: 768px)
+  .location-grid img
+    height: 48vh
+  .location-overlay
+    padding: 20px
+    h3
+      font-size: 1.5em
+
 // Gallery Overview
 .gallery-overview
   padding: 0
@@ -57,7 +100,7 @@
   padding: 2%
 
 .masonry-item
-  width: 32%
+  width: 30.5%
   margin-bottom: 15px
   cursor: pointer
   overflow: hidden
@@ -170,7 +213,9 @@
 // Responsive Design
 @media (max-width: 1024px)
   .side_bio_container
-    transform: translateX(-100%)
+    width: 320px
+    max-width: 85vw
+    transform: translateX(-102%)
     transition: transform 0.3s ease
 
     &.open
@@ -179,6 +224,11 @@
   .main_content_container
     width: 100%
     margin-left: 0
+
+  // Clear the fixed hamburger button on pages without a banner
+  .projects-page,
+  .main_content
+    padding-top: 80px
 
   .masonry-item
     width: 48%

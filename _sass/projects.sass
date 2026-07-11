@@ -1,0 +1,143 @@
+// Styling for the programming portfolio (/projects/) and the homepage teaser
+
+@import 'global_variables'
+
+$terminal_ink: #16181d
+$mono_stack: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace
+
+.projects-page
+  padding: 60px 6% 80px
+
+.projects-header
+  max-width: 720px
+  margin-bottom: 48px
+  h1
+    color: $primary_color
+    font-size: 2.5em
+    margin-bottom: 16px
+  .lede
+    color: #555
+    font-size: 1.05em
+    line-height: 1.6
+    a
+      color: $primary_color
+      border-bottom: 1px solid rgba($primary_color, 0.3)
+      &:hover
+        border-bottom-color: $primary_color
+
+.projects-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr))
+  gap: 28px
+
+.project-card
+  background: white
+  border-radius: 8px
+  overflow: hidden
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1)
+  display: flex
+  flex-direction: column
+  transition: all 0.3s ease
+  &:hover
+    transform: translateY(-6px)
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15)
+
+// Each card opens with the project's real invocation, set in a small terminal
+.project-terminal
+  background: $terminal_ink
+  padding: 12px 16px 16px
+  .term-dots
+    margin-bottom: 10px
+    span
+      display: inline-block
+      width: 10px
+      height: 10px
+      margin-right: 6px
+      border-radius: 50%
+      background: rgba(white, 0.18)
+  code
+    font-family: $mono_stack
+    font-size: 0.82em
+    color: rgba(white, 0.85)
+    white-space: nowrap
+    display: block
+    overflow: hidden
+    text-overflow: ellipsis
+  .term-prompt
+    color: lighten($primary_color, 35%)
+  .term-cursor
+    display: inline-block
+    width: 8px
+    height: 1em
+    margin-left: 4px
+    vertical-align: text-bottom
+    background: rgba(white, 0.6)
+    animation: term-blink 1.2s steps(1) infinite
+
+@keyframes term-blink
+  50%
+    opacity: 0
+
+@media (prefers-reduced-motion: reduce)
+  .project-terminal .term-cursor
+    animation: none
+
+.project-body
+  padding: 18px 20px 14px
+  flex: 1
+  h3
+    color: #1a1a1a
+    margin-bottom: 8px
+  p
+    color: #555
+    font-size: 0.92em
+    line-height: 1.55
+
+// Metadata strip: the EXIF readout of a project — language, form factor, source
+.project-exif
+  display: flex
+  align-items: center
+  gap: 16px
+  padding: 12px 20px
+  border-top: 1px solid #ececec
+  font-family: $mono_stack
+  font-size: 0.75em
+  letter-spacing: 0.02em
+  color: #777
+  .lang-dot
+    display: inline-block
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    margin-right: 6px
+    vertical-align: -1px
+  .source
+    margin-left: auto
+    color: $primary_color
+    &:hover
+      color: darken($primary_color, 10%)
+
+// Homepage band pointing at the programming half of the site
+.projects-teaser
+  background: $terminal_ink
+  text-align: center
+  padding: 56px 20px
+  a
+    font-family: $mono_stack
+    font-size: 1.15em
+    letter-spacing: 0.03em
+    color: rgba(white, 0.85)
+    .term-prompt
+      color: lighten($primary_color, 35%)
+    &:hover
+      color: white
+  .teaser-sub
+    margin-top: 12px
+    color: rgba(white, 0.45)
+    font-size: 0.85em
+
+@media (max-width: 768px)
+  .projects-page
+    padding: 80px 5% 60px
+  .projects-grid
+    grid-template-columns: 1fr
