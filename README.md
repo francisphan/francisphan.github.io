@@ -1,7 +1,7 @@
 # francisphan.github.io
 
 Personal site for Francis Phan: résumé first, projects second, photography as
-the personality splash. Jekyll on GitHub Pages, served at https://francisphan.info.
+the personality splash. Jekyll on GitHub Pages, served at https://francisphan.github.io.
 
 ```bash
 bundle exec jekyll serve   # http://localhost:4000

@@ -17,7 +17,7 @@ title: Francis Phan
 email: fs.phan@gmail.com
 description: "Francis Phan — senior software engineer, infrastructure & reliability."
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://francisphan.info" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://francisphan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: phancis
 github_username:  francisphan
 
