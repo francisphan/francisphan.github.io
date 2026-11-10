@@ -19,11 +19,14 @@ layout: default
     <img class="hero-portrait" src="/images/portrait-min.jpg" alt="Francis Phan">
   </div>
   <div class="wrap">
-    <dl class="stats">
-      {% for s in r.stats %}
-      <div><dt>{{ s.value }}</dt><dd>{{ s.label }}</dd></div>
+    <div class="pillars">
+      {% for p in r.pillars %}
+      <div class="pillar">
+        <h2>{{ p.title }}</h2>
+        <p>{{ p.body }}</p>
+      </div>
       {% endfor %}
-    </dl>
+    </div>
   </div>
 </section>
 
