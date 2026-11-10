@@ -1,11 +1,16 @@
-// Global variables such as site-wide colors to be imported in every other file
+// Global variables imported by every other file. Colors are theme tokens:
+// the CSS custom properties they point at are defined in site.sass (dark by
+// default, light when <html data-theme="light">).
 
-$primary_color: #1C4988
+$primary_color: #1C4988   // fixed brand navy, for places that need a real color value
 
-$ink: #14171c
-$muted: #5b6270
-$line: #e3e5e9
-$paper: #fbfbf9
-$band: #f2f3f1
+$accent: var(--accent)
+$ink: var(--ink)
+$body: var(--body)
+$muted: var(--muted)
+$line: var(--line)
+$paper: var(--bg)
+$band: var(--band)
+$surface: var(--surface)
 $sans_stack: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif
 $mono_stack: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace
