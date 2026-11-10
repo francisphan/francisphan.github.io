@@ -10,5 +10,21 @@
     showHideAnimationType: 'zoom',
   });
 
+  // Show the photo's caption (if it has one) at the bottom of the lightbox.
+  lightbox.on('uiRegister', () => {
+    lightbox.pswp.ui.registerElement({
+      name: 'custom-caption',
+      order: 9,
+      isButton: false,
+      appendTo: 'root',
+      onInit: (el, pswp) => {
+        pswp.on('change', () => {
+          const caption = pswp.currSlide.data.element?.querySelector('.pswp-caption-content');
+          el.textContent = caption ? caption.textContent.trim() : '';
+        });
+      },
+    });
+  });
+
   lightbox.init();
 </script>

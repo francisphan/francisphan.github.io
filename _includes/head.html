@@ -5,12 +5,15 @@
     // Apply a saved theme before first paint; dark is the default.
     try { if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}
   </script>
-  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  {% if page.title %}{% assign full_title = page.title | append: " — " | append: site.title %}{% else %}{% assign full_title = site.title | append: " — " | append: site.data.resume.headline %}{% endif %}
+  <title>{{ full_title }}</title>
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta name="theme-color" content="#0f1115">
   {% assign og_description = page.description | default: site.description %}
   <meta name="description" content="{{ og_description }}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}">
+  <meta property="og:title" content="{{ full_title }}">
   <meta property="og:description" content="{{ og_description }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ '/images/og.jpg' | absolute_url }}">

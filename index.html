@@ -17,7 +17,7 @@ layout: default
         <a class="btn" href="{{ r.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
-    <img class="hero-portrait" src="/images/portrait-min.jpg" alt="Francis Phan">
+    <img class="hero-portrait" src="/images/portrait-min.jpg" alt="" width="600" height="400">
   </div>
   <div class="wrap">
     <div class="pillars">
@@ -105,7 +105,7 @@ layout: default
   <div class="filmstrip">
     {% assign strip = "portfolio/thumb/000,portfolio/thumb/002,city/thumb/075,portfolio/thumb/006,portfolio/thumb/003,portfolio/thumb/005" | split: "," %}
     {% for img in strip %}
-    <a href="/photos/"><img src="/images/{{ img }}.jpg" alt="Photograph" loading="lazy"></a>
+    <a href="/photos/" tabindex="-1" aria-hidden="true"><img src="/images/{{ img }}.jpg" alt="" width="800" height="800" loading="lazy"></a>
     {% endfor %}
   </div>
 </section>

@@ -18,7 +18,8 @@
   {% endif %}
   <div class="project-body">
     <span class="kind">{{ include.project.kind }}</span>
-    <h3>{{ include.project.name }}</h3>
+    {% assign heading = include.heading | default: "h3" %}
+    <{{ heading }}>{{ include.project.name }}</{{ heading }}>
     <p>{{ include.project.description }}</p>
   </div>
   <div class="project-exif">

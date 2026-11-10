@@ -73,6 +73,20 @@ img
   text-transform: uppercase
   color: $muted
 
+// Skip link: hidden until focused from the keyboard
+.skip-link
+  position: absolute
+  left: 16px
+  top: -48px
+  z-index: 100
+  padding: 8px 14px
+  border-radius: 6px
+  background: $accent
+  color: var(--on-accent)
+  font-weight: 600
+  &:focus
+    top: 12px
+
 // Top nav
 .topnav
   position: sticky
@@ -254,3 +268,17 @@ html[data-theme="light"] .theme-toggle
     width: 28px
     height: 28px
     margin-left: -2px
+
+// Phones: taller tap areas on the nav links without changing the bar's height
+@media (max-width: 640px)
+  .topnav-inner nav a
+    padding: 10px 0
+
+// Respect "reduce motion": no smooth scrolling, hover lifts or zooms
+@media (prefers-reduced-motion: reduce)
+  html
+    scroll-behavior: auto
+  *, *::before, *::after
+    transition-duration: 0.01ms !important
+    animation-duration: 0.01ms !important
+    animation-iteration-count: 1 !important

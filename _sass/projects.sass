@@ -91,7 +91,7 @@
     text-transform: uppercase
     color: $muted
     margin-bottom: 4px
-  h3
+  h2, h3
     font-size: 1.05rem
     margin-bottom: 6px
   p
@@ -133,3 +133,9 @@
 @media (max-width: 640px)
   .projects-grid
     grid-template-columns: 1fr
+
+// Phones: give the small Play/Source links a ~32px tap area without moving them
+@media (max-width: 640px)
+  .project-exif .links a
+    padding: 7px 0
+    margin: -7px 0

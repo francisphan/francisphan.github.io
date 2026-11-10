@@ -1,15 +1,13 @@
 title: Francis Phan
 email: fs.phan@gmail.com
 description: "Francis Phan — senior software engineer, infrastructure & reliability."
-baseurl: "/"
+baseurl: ""
 url: "https://francisphan.github.io"
 twitter_username: phancis
 github_username:  francisphan
 
 # Build settings
 markdown: kramdown
-theme: minima
-gems: [jekyll-feed, jekyll-coffeescript, jekyll-minifier]
 exclude:
   - Gemfile
   - Gemfile.lock

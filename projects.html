@@ -11,14 +11,14 @@ permalink: /projects/
     Most of these come out of my work at The Vines of Mendoza: the data plumbing
     between its property-management system, Salesforce, and NetSuite, and the
     AI services that sit on top. The rest are tools and games I wanted to exist.
-    All of it is on <a href="https://github.com/francisphan/">GitHub</a>.
+    Most of it is on <a href="https://github.com/francisphan/">GitHub</a>.
   </p>
 </div>
 
 <div class="wrap section-tight">
   <div class="projects-grid">
     {% for project in site.data.projects %}
-      {% include project-card.html project=project %}
+      {% include project-card.html project=project heading="h2" %}
     {% endfor %}
   </div>
 </div>
