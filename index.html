@@ -1,22 +1,107 @@
 ---
 layout: default
 ---
+{% assign r = site.data.resume %}
 
-{% for album in site.data.galleries %}
-<div id="{{ album.slug }}" class="location-section">
-  <div class="location-grid">
-    <a href="/gallery/{{ album.slug }}/">
-      <img src="{{ album.featured_image }}" alt="{{ album.name }}" loading="lazy">
-      <div class="location-overlay">
-        <h3>{{ album.name }}</h3>
-        <p>{{ album.description }}</p>
+<section id="about" class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">{{ r.location }}</p>
+      <h1>Francis Phan</h1>
+      <p class="headline">{{ r.headline }}</p>
+      <p class="summary">{{ r.summary }}</p>
+      <div class="hero-links">
+        <a class="btn primary" href="mailto:{{ site.email }}">Get in touch</a>
+        <a class="btn" href="https://github.com/francisphan/" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="{{ r.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-    </a>
+    </div>
+    <img class="hero-portrait" src="/images/portrait-min.jpg" alt="Francis Phan">
   </div>
-</div>
-{% endfor %}
+  <div class="wrap">
+    <dl class="stats">
+      {% for s in r.stats %}
+      <div><dt>{{ s.value }}</dt><dd>{{ s.label }}</dd></div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
 
-<div class="projects-teaser">
-  <a href="/projects/"><span class="term-prompt">$</span> cd ~/projects</a>
-  <p class="teaser-sub">The software side of this site</p>
-</div>
+<section id="experience" class="wrap section">
+  <h2 class="section-title">Experience</h2>
+  {% for job in r.experience %}
+  <article class="job">
+    <div class="job-meta">
+      <span class="dates">{{ job.dates }}</span>
+      <span class="where">{{ job.where }}</span>
+    </div>
+    <div class="job-body">
+      <h3>{{ job.role }}</h3>
+      <p class="company">{{ job.company }}</p>
+      {% if job.blurb %}<p class="blurb">{{ job.blurb }}</p>{% endif %}
+      <ul>
+        {% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}
+      </ul>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<section id="projects" class="section band">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Selected projects</h2>
+      <a class="more" href="/projects/">All projects &rarr;</a>
+    </div>
+    <div class="projects-grid">
+      {% for project in site.data.projects limit: 6 %}
+        {% include project-card.html project=project %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="wrap section">
+  <h2 class="section-title">Skills</h2>
+  <dl class="skills">
+    {% for s in r.skills %}
+    <dt>{{ s.group }}</dt>
+    <dd>{% for i in s.items %}<span class="chip">{{ i }}</span>{% endfor %}</dd>
+    {% endfor %}
+  </dl>
+</section>
+
+<section id="education" class="wrap section">
+  <h2 class="section-title">Education</h2>
+  {% for e in r.education %}
+  <article class="job">
+    <div class="job-meta"><span class="dates">{{ e.dates }}</span></div>
+    <div class="job-body">
+      <h3>{{ e.degree }}</h3>
+      <p class="company">{{ e.school }}</p>
+      {% if e.note %}<p class="blurb">{{ e.note }}</p>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<section id="off-the-clock" class="splash">
+  <a class="splash-image" href="/photos/" style="background-image: url('/images/portfolio/full/004.jpg')">
+    <div class="wrap splash-text">
+      <p class="eyebrow">Off the clock</p>
+      <h2>I also take pictures.</h2>
+      <p>
+        When I'm not on a terminal I'm usually behind a camera — the Bolivian
+        salt flats, Taipei and Seoul after dark, a tiger in the grass in India.
+        Same instinct as debugging, really: wait for the pattern, then frame it.
+      </p>
+      <span class="cta">See the photographs &rarr;</span>
+    </div>
+  </a>
+  <div class="filmstrip">
+    {% assign strip = "portfolio/thumb/000,portfolio/thumb/002,city/thumb/075,portfolio/thumb/006,portfolio/thumb/003,portfolio/thumb/005" | split: "," %}
+    {% for img in strip %}
+    <a href="/photos/"><img src="/images/{{ img }}.jpg" alt="Photograph" loading="lazy"></a>
+    {% endfor %}
+  </div>
+</section>

@@ -1,73 +1,52 @@
-// Styling for the programming portfolio (/projects/) and the homepage teaser
+// Project cards: used on /projects/ and the résumé's "Selected projects" band
 
 @import 'global_variables'
 
 $terminal_ink: #16181d
-$mono_stack: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace
-
-.projects-page
-  padding: 60px 6% 80px
-
-.projects-header
-  max-width: 720px
-  margin-bottom: 48px
-  h1
-    color: $primary_color
-    font-size: 2.5em
-    margin-bottom: 16px
-  .lede
-    color: #555
-    font-size: 1.05em
-    line-height: 1.6
-    a
-      color: $primary_color
-      border-bottom: 1px solid rgba($primary_color, 0.3)
-      &:hover
-        border-bottom-color: $primary_color
 
 .projects-grid
   display: grid
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr))
-  gap: 28px
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  gap: 20px
 
 .project-card
   background: white
+  border: 1px solid $line
   border-radius: 8px
   overflow: hidden
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1)
   display: flex
   flex-direction: column
-  transition: all 0.3s ease
+  transition: transform 0.25s ease, box-shadow 0.25s ease
   &:hover
-    transform: translateY(-6px)
-    box-shadow: 0 12px 20px rgba(0,0,0,0.15)
+    transform: translateY(-3px)
+    box-shadow: 0 10px 24px rgba(20, 23, 28, 0.08)
 
 // Each card opens with the project's real invocation, set in a small terminal
 .project-terminal
   background: $terminal_ink
-  padding: 12px 16px 16px
+  padding: 12px 16px 14px
   .term-dots
     margin-bottom: 10px
     span
       display: inline-block
-      width: 10px
-      height: 10px
+      width: 9px
+      height: 9px
       margin-right: 6px
       border-radius: 50%
       background: rgba(white, 0.18)
   code
     font-family: $mono_stack
-    font-size: 0.82em
+    font-size: 0.8rem
     color: rgba(white, 0.85)
     white-space: nowrap
     display: block
     overflow: hidden
     text-overflow: ellipsis
   .term-prompt
-    color: lighten($primary_color, 35%)
+    color: lighten($primary_color, 40%)
   .term-cursor
     display: inline-block
-    width: 8px
+    width: 7px
     height: 1em
     margin-left: 4px
     vertical-align: text-bottom
@@ -83,61 +62,53 @@ $mono_stack: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace
     animation: none
 
 .project-body
-  padding: 18px 20px 14px
+  padding: 18px 20px 16px
   flex: 1
+  .kind
+    display: block
+    font-family: $mono_stack
+    font-size: 0.68rem
+    letter-spacing: 0.08em
+    text-transform: uppercase
+    color: $muted
+    margin-bottom: 4px
   h3
-    color: #1a1a1a
-    margin-bottom: 8px
+    font-size: 1.05rem
+    margin-bottom: 6px
   p
-    color: #555
-    font-size: 0.92em
+    color: $muted
+    font-size: 0.9rem
     line-height: 1.55
 
-// Metadata strip: the EXIF readout of a project — language, form factor, source
+// Metadata strip: language, form factor, links
 .project-exif
   display: flex
   align-items: center
-  gap: 16px
-  padding: 12px 20px
-  border-top: 1px solid #ececec
+  gap: 14px
+  padding: 11px 20px
+  border-top: 1px solid $line
   font-family: $mono_stack
-  font-size: 0.75em
-  letter-spacing: 0.02em
-  color: #777
+  font-size: 0.72rem
+  color: $muted
+  .lang
+    white-space: nowrap
   .lang-dot
     display: inline-block
-    width: 10px
-    height: 10px
+    width: 9px
+    height: 9px
     border-radius: 50%
     margin-right: 6px
     vertical-align: -1px
-  .source
+  .links
     margin-left: auto
-    color: $primary_color
-    &:hover
-      color: darken($primary_color, 10%)
+    display: flex
+    gap: 14px
+    white-space: nowrap
+    a
+      color: $primary_color
+      &:hover
+        text-decoration: underline
 
-// Homepage band pointing at the programming half of the site
-.projects-teaser
-  background: $terminal_ink
-  text-align: center
-  padding: 56px 20px
-  a
-    font-family: $mono_stack
-    font-size: 1.15em
-    letter-spacing: 0.03em
-    color: rgba(white, 0.85)
-    .term-prompt
-      color: lighten($primary_color, 35%)
-    &:hover
-      color: white
-  .teaser-sub
-    margin-top: 12px
-    color: rgba(white, 0.45)
-    font-size: 0.85em
-
-@media (max-width: 768px)
-  .projects-page
-    padding: 80px 5% 60px
+@media (max-width: 640px)
   .projects-grid
     grid-template-columns: 1fr

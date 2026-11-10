@@ -14,7 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Francis Phan
-email: fphan@umass.edu
+email: fs.phan@gmail.com
+description: "Francis Phan — senior software engineer, infrastructure & reliability."
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://francisphan.info" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: phancis
@@ -38,17 +39,3 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
-
-# Collections for photo galleries
-collections:
-  photos:
-    output: true
-    permalink: /gallery/:path/
-
-defaults:
-  - scope:
-      path: ""
-      type: "photos"
-    values:
-      layout: "photo-album"
-      banner: false

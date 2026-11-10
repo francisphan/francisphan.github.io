@@ -1,0 +1,63 @@
+# Résumé content for the homepage (source: Francis_Phan_Resume, Nov 2026).
+headline: "Senior Software Engineer, Infrastructure & Reliability"
+location: "Cambridge, MA"
+linkedin: "https://www.linkedin.com/in/francis-phan"
+summary: >-
+  Infrastructure-minded senior engineer with six years at AWS running the Amazon
+  EFS control plane across 15+ regions, and the go-to incident lead for
+  high-severity outages. Since 2025, the sole engineer building integrations,
+  internal tools and AI services for a luxury hospitality business. I work in
+  Python, Java and TypeScript on AWS and Linux.
+
+stats:
+  - value: "6 yrs"
+    label: "at AWS on Amazon EFS & EBS"
+  - value: "15+"
+    label: "regions on the EFS control plane"
+  - value: "~24 h"
+    label: "Log4Shell patched in every region"
+  - value: "24% → 10%"
+    label: "MCP tool error rate, usage-driven"
+
+experience:
+  - role: "Systems & Software Consultant"
+    company: "The Vines of Mendoza"
+    where: "Remote / Uco Valley, Argentina"
+    dates: "2025 – Present"
+    blurb: "Sole engineer for infrastructure, integrations and internal tools at a vineyard resort and ownership community."
+    bullets:
+      - "Built a hotel-to-Salesforce guest sync that polls the on-prem Oracle database; runs unattended with automated deploys and a pause-and-replay safeguard."
+      - "Replaced an estimated ~$14K-a-year Entrepreneurial Operating System (EOS) subscription with an in-house app costing under $2K a year, extending it to all ~100 staff in English and Spanish."
+      - "Built an MCP server unifying Salesforce and NetSuite data so sales, marketing and client services can find information and produce reports easily; weekly usage reports drive continuous improvement, cutting the tool error rate from ~24% to ~10% and degraded calls to zero."
+      - "Built an AI Slack assistant that lets staff look up customer data through the MCP server, and automatically builds guest profiles from public sources so hotel, resort and restaurant staff can tailor each stay."
+  - role: "Software Development Engineer"
+    company: "Amazon Web Services — EFS and EBS"
+    where: "Boston, MA · SDE Intern, Summer 2017"
+    dates: "2018 – 2024"
+    bullets:
+      - "Developed and operated the EFS Control Plane, the customer-facing API managing file system resources across 15+ regions."
+      - "Incident lead for high-severity outages, from internal failures to dependencies like Route 53 and DynamoDB: ran war rooms, tracked recovery, and identified and notified affected customers, including a 12+ hour Route 53 outage; wrote and drove COEs."
+      - "Built roll-up alarms for dependency outages like Route 53 and DynamoDB, cutting hundreds of pages to a handful so on-call could fight the outage, not the pager."
+      - "Led the Log4Shell emergency response for EBS Fast Snapshot Restore: patched multiple services in every region, including China and GovCloud, in ~24 hours, then wrote the emergency-deploy runbook."
+      - "Proposed and led a ~6-person rewrite of the EFS console off a deprecated stack, speeding up feature releases, cutting new-hire setup from weeks to ~1 hour, and passing an external pentest and AppSec review."
+      - "Automated on-call operations with scripts for bulk resource recovery and customer impact assessment."
+      - "Mentored interns and new hires, including hosting a summer intern on the console rewrite."
+      - "Shipped IAM resource policy support for EFS, and maintained CI/CD pipelines, CloudFormation infrastructure, and CloudWatch dashboards and alarms."
+
+skills:
+  - group: "Cloud & Infra"
+    items: ["AWS EC2", "DynamoDB", "SQS", "SNS", "Lambda", "S3", "IAM", "CloudWatch", "CloudFormation", "CDK", "Secrets Manager", "Linux", "Shell scripting", "Infrastructure as code"]
+  - group: "Reliability"
+    items: ["On-call & incident command", "Observability & roll-up alarming", "Runbooks", "COEs / postmortems", "Emergency multi-region deploys"]
+  - group: "Delivery"
+    items: ["CI/CD", "GitHub Actions", "Amazon Pipelines / Apollo", "Automated deploys", "Security reviews"]
+  - group: "Languages"
+    items: ["Python", "Java", "TypeScript / JavaScript", "Ruby", "SQL"]
+  - group: "AI in production"
+    items: ["MCP servers", "Claude agent loops", "Usage-driven reliability tuning"]
+
+education:
+  - degree: "B.S. in Computer Science, Minor in Mathematics"
+    school: "University of Massachusetts Amherst"
+    dates: "2014 – 2017"
+    note: "Lead web developer: led a Ruby on Rails team building an internal app for IT classroom consultants."

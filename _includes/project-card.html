@@ -1,0 +1,15 @@
+<article class="project-card">
+  <div class="project-terminal" aria-hidden="true">
+    <div class="term-dots"><span></span><span></span><span></span></div>
+    <code><span class="term-prompt">{{ include.project.prompt }}</span> {{ include.project.cmd }}<span class="term-cursor"></span></code>
+  </div>
+  <div class="project-body">
+    <span class="kind">{{ include.project.kind }}</span>
+    <h3>{{ include.project.name }}</h3>
+    <p>{{ include.project.description }}</p>
+  </div>
+  <div class="project-exif">
+    <span class="lang"><span class="lang-dot" style="background: {{ include.project.lang_color }}"></span>{{ include.project.lang }}</span>
+    <span class="links">{% if include.project.live %}<a href="{{ include.project.live }}" target="_blank" rel="noopener">Play &#8599;</a>{% endif %}<a href="{{ include.project.repo }}" target="_blank" rel="noopener">Source &#8599;</a></span>
+  </div>
+</article>

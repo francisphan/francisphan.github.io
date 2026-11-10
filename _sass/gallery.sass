@@ -1,106 +1,12 @@
 @import 'global_variables'
 
-// Homepage location sections — one full-width tile per album, anchor targets
-// for the sidebar links
-.location-section
-  scroll-margin-top: 20px
-
-.location-grid
-  position: relative
-  overflow: hidden
-  a
-    display: block
-    position: relative
-  img
-    display: block
-    width: 100%
-    height: 72vh
-    object-fit: cover
-    transition: transform 0.6s ease
-  a:hover img
-    transform: scale(1.03)
-
-.location-overlay
-  position: absolute
-  left: 0
-  right: 0
-  bottom: 0
-  padding: 32px 36px
-  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent)
-  h3
-    color: white
-    font-size: 2em
-    margin-bottom: 4px
-  p
-    color: rgba(255,255,255,0.85)
-    font-size: 1em
-
-@media (max-width: 768px)
-  .location-grid img
-    height: 48vh
-  .location-overlay
-    padding: 20px
-    h3
-      font-size: 1.5em
-
-// Gallery Overview
-.gallery-overview
-  padding: 0
-  width: 100%
-
-.gallery-title
-  text-align: center
-  font-size: 2.5em
-  margin: 40px 0
-  color: $primary_color
-
-// Album Cards Grid
-.album-grid
-  display: grid
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))
-  gap: 30px
-  padding: 5%
-
-.album-card
-  background: white
-  border-radius: 8px
-  overflow: hidden
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1)
-  transition: all 0.3s ease
-  cursor: pointer
-
-  &:hover
-    transform: translateY(-8px)
-    box-shadow: 0 12px 20px rgba(0,0,0,0.15)
-
-  a
-    text-decoration: none
-    color: inherit
-
-.album-cover
-  width: 100%
-  height: 250px
-  background-size: cover
-  background-position: center
-
-.album-info
-  padding: 20px
-
-  h3
-    margin: 0 0 10px 0
-    color: $primary_color
-
-  p
-    margin: 0
-    color: #666
-    font-size: 0.9em
-
 // Masonry Grid Layout
 .masonry-grid
-  padding: 2%
+  padding-bottom: 96px
 
+// Widths account for Masonry's 15px gutter so columns fill the row exactly
 .masonry-item
-  width: 30.5%
+  width: calc((100% - 30px) / 3)
   margin-bottom: 15px
   cursor: pointer
   overflow: hidden
@@ -117,28 +23,6 @@
 
 .photo-caption
   display: none  // Hidden until shown in lightbox
-
-// Album Header
-.album-header
-  text-align: center
-  padding: 40px 5%
-  background: linear-gradient(135deg, lighten($primary_color, 40%), lighten($primary_color, 30%))
-
-  h1
-    margin: 0 0 15px 0
-    color: white
-    font-size: 2.5em
-
-  p
-    margin: 0
-    color: rgba(255,255,255,0.9)
-    font-size: 1.1em
-
-// Photo Album Container
-.photo-album
-  width: 100%
-  margin: 0
-  padding: 0
 
 // Home Featured Section
 .home-featured
@@ -212,46 +96,12 @@
 
 // Responsive Design
 @media (max-width: 1024px)
-  .side_bio_container
-    width: 320px
-    max-width: 85vw
-    transform: translateX(-102%)
-    transition: transform 0.3s ease
-
-    &.open
-      transform: translateX(0)
-
-  .main_content_container
-    width: 100%
-    margin-left: 0
-
-  // Clear the fixed hamburger button on pages without a banner
-  .projects-page,
-  .main_content
-    padding-top: 80px
-
   .masonry-item
-    width: 48%
-
-  .album-grid
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
-    padding: 3%
+    width: calc((100% - 15px) / 2)
 
 @media (max-width: 768px)
   .masonry-item
-    width: 48%
     margin-bottom: 10px
-
-  .album-grid
-    grid-template-columns: 1fr
-    gap: 20px
-    padding: 5%
-
-  .gallery-title
-    font-size: 2em
-
-  .album-header h1
-    font-size: 2em
 
   .featured-grid
     grid-template-columns: 1fr
@@ -263,18 +113,6 @@
 @media (max-width: 480px)
   .masonry-item
     width: 100%
-
-  .gallery-title
-    font-size: 1.8em
-
-  .album-header
-    padding: 30px 5%
-
-    h1
-      font-size: 1.8em
-
-    p
-      font-size: 1em
 
   .home-featured h2
     font-size: 1.8em
