@@ -33,6 +33,7 @@ experience:
     company: "Amazon Web Services — EFS and EBS"
     where: "Boston, MA"
     dates: "2018 – 2024"
+    blurb: "Developed and operated the EFS Control Plane, the customer-facing API managing file system resources across 15+ regions."
     bullets:
       - "Incident lead for high-severity outages, from internal failures to dependencies like Route 53 and DynamoDB: ran war rooms, tracked recovery, and identified and notified affected customers, including a 12+ hour Route 53 outage; wrote and drove COEs."
       - "Built roll-up alarms for dependency outages like Route 53 and DynamoDB, cutting hundreds of pages to a handful so on-call could fight the outage, not the pager."
