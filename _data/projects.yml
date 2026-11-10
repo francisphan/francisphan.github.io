@@ -2,6 +2,7 @@
 # Each entry renders as a card on /projects/:
 # `cmd` is the project's real invocation, shown in the card's terminal header.
 # `image` (optional) replaces the terminal header with a screenshot.
+# `private` (instead of `repo`) labels a project whose code isn't public.
 - name: "agent-b"
   repo: "https://github.com/francisphan/agent-b"
   lang: "Python"
@@ -10,6 +11,15 @@
   prompt: ">"
   cmd: "guest_360_profile(\"guest@example.com\")"
   description: "An MCP server that gives AI clients tools over Salesforce, NetSuite, Pardot, and OPERA PMS — composite lookups like a full guest 360, with write operations gated behind a token and OAuth for Claude Desktop."
+
+- name: "Cadencia"
+  private: "Private repo"
+  lang: "TypeScript"
+  lang_color: "#3178C6"
+  kind: "Internal web app"
+  prompt: "$"
+  cmd: "pnpm dev"
+  description: "An in-house EOS platform that replaced a ~$14K-a-year subscription for under $2K a year. Weekly L10 meetings, Rocks, Scorecard, V/TO, accountability chart and one-on-ones for all ~100 staff, in English and Spanish. Next.js and Postgres (Supabase, Drizzle), deployed to Cloud Run."
 
 - name: "opera-file-sync"
   repo: "https://github.com/francisphan/opera-file-sync"
