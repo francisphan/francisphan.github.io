@@ -19,6 +19,26 @@
     transform: translateY(-3px)
     box-shadow: var(--shadow)
 
+// A screenshot header, for projects you can see (replaces the terminal)
+.project-shot
+  display: block
+  overflow: hidden
+  background: var(--terminal)
+  border-bottom: 1px solid $line
+  img
+    display: block
+    width: 100%
+    aspect-ratio: 16 / 10
+    object-fit: cover
+    object-position: center
+    transition: transform 0.5s ease
+  &:hover img
+    transform: scale(1.03)
+
+@media (prefers-reduced-motion: reduce)
+  .project-shot img
+    transition: none
+
 // Each card opens with the project's real invocation, set in a small terminal
 .project-terminal
   background: var(--terminal)

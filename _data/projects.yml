@@ -1,6 +1,7 @@
 # Programming portfolio, in display order (the homepage shows the first six).
 # Each entry renders as a card on /projects/:
 # `cmd` is the project's real invocation, shown in the card's terminal header.
+# `image` (optional) replaces the terminal header with a screenshot.
 - name: "agent-b"
   repo: "https://github.com/francisphan/agent-b"
   lang: "Python"
@@ -31,6 +32,8 @@
 - name: "Pung"
   repo: "https://github.com/francisphan/pung"
   live: "https://francisphan.github.io/pung/"
+  image: "/images/projects/pung.jpg"
+  image_alt: "A hand of Pung in progress: three bots around the table, discards in the middle, and a Chow offer above the player's tiles"
   lang: "TypeScript"
   lang_color: "#3178C6"
   kind: "Browser game"
