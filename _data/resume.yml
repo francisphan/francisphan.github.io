@@ -34,18 +34,15 @@ experience:
     where: "Boston, MA"
     dates: "2018 – 2024"
     bullets:
-      - "Developed and operated the EFS Control Plane, the customer-facing API managing file system resources across 15+ regions."
       - "Incident lead for high-severity outages, from internal failures to dependencies like Route 53 and DynamoDB: ran war rooms, tracked recovery, and identified and notified affected customers, including a 12+ hour Route 53 outage; wrote and drove COEs."
       - "Built roll-up alarms for dependency outages like Route 53 and DynamoDB, cutting hundreds of pages to a handful so on-call could fight the outage, not the pager."
       - "Led the Log4Shell emergency response for EBS Fast Snapshot Restore: patched multiple services in every region, including China and GovCloud, in ~24 hours, then wrote the emergency-deploy runbook."
-      - "Proposed and led a ~6-person rewrite of the EFS console off a deprecated stack, speeding up feature releases, cutting new-hire setup from weeks to ~1 hour, and passing an external pentest and AppSec review."
-      - "Automated on-call operations with scripts for bulk resource recovery and customer impact assessment."
-      - "Mentored interns and new hires, including hosting a summer intern on the console rewrite."
+      - "Proposed and led a ~6-person rewrite of the EFS console off a deprecated stack, speeding up feature releases, cutting new-hire setup from weeks to ~1 hour, and passing an external pentest and AppSec review; hosted a summer intern on the rewrite."
       - "Shipped IAM resource policy support for EFS, and maintained CI/CD pipelines, CloudFormation infrastructure, and CloudWatch dashboards and alarms."
 
 skills:
   - group: "Cloud & Infra"
-    items: ["AWS EC2", "DynamoDB", "SQS", "SNS", "Lambda", "S3", "IAM", "CloudWatch", "CloudFormation", "CDK", "Secrets Manager", "Linux", "Shell scripting", "Infrastructure as code"]
+    items: ["EC2", "DynamoDB", "SQS", "SNS", "Lambda", "S3", "IAM", "CloudWatch", "CloudFormation", "CDK", "Secrets Manager", "Linux", "Shell scripting", "Infrastructure as code"]
   - group: "Reliability"
     items: ["On-call & incident command", "Observability & roll-up alarming", "Runbooks", "COEs / postmortems", "Emergency multi-region deploys"]
   - group: "Delivery"
