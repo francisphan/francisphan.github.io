@@ -29,11 +29,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - IMPLEMENTATION_COMPLETE.md
-  - QUICK_START.md
-  - TRANSFORMATION_SUMMARY.md
-  - VERIFICATION_CHECKLIST.md
-  - SITE_STRUCTURE.txt
   - favicon.psd
 
 sass:
