@@ -32,7 +32,8 @@
     object-fit: cover
     object-position: center
     transition: transform 0.5s ease
-  &:hover img
+  // Only previews that link somewhere zoom on hover
+  &[href]:hover img
     transform: scale(1.03)
 
 @media (prefers-reduced-motion: reduce)
