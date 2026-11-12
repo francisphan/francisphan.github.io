@@ -24,6 +24,6 @@
   </div>
   <div class="project-exif">
     <span class="lang"><span class="lang-dot" style="background: {{ include.project.lang_color }}"></span>{{ include.project.lang }}</span>
-    <span class="links">{% if include.project.live %}<a href="{{ include.project.live }}" target="_blank" rel="noopener">Play &#8599;</a>{% endif %}{% if include.project.repo %}<a href="{{ include.project.repo }}" target="_blank" rel="noopener">Source &#8599;</a>{% else %}<span class="private">{{ include.project.private }}</span>{% endif %}</span>
+    <span class="links">{% if include.project.live %}<a href="{{ include.project.live }}" target="_blank" rel="noopener">{{ include.project.live_label | default: "Play" }} &#8599;</a>{% endif %}{% if include.project.repo %}<a href="{{ include.project.repo }}" target="_blank" rel="noopener">Source &#8599;</a>{% else %}<span class="private">{{ include.project.private }}</span>{% endif %}</span>
   </div>
 </article>

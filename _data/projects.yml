@@ -71,12 +71,14 @@
 
 - name: "Tomo"
   repo: "https://github.com/francisphan/Tomo"
+  live: "https://francisphan.github.io/Tomo/"
+  live_label: "Arc guide"
   lang: "Go"
   lang_color: "#00ADD8"
   kind: "CLI + desktop app"
   prompt: "$"
   cmd: "tomo search \"tower of god\""
-  description: "Downloads manga and manhwa series as CBZ archives for offline reading on an iPad. Pluggable per-site scrapers, concurrent page fetching, resumable downloads — plus a Tauri desktop wrapper that bundles the CLI as a sidecar."
+  description: "Downloads manga and manhwa series as CBZ archives for offline reading on an iPad. Pluggable per-site scrapers, concurrent page fetching, resumable downloads — plus a Tauri desktop wrapper that bundles the CLI as a sidecar. A static arc guide lists the chapter ranges of each story arc, for quick rereads."
 
 - name: "Peyto"
   repo: "https://github.com/francisphan/Peyto"
