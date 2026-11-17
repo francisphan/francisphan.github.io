@@ -14,6 +14,17 @@
   cmd: "guest_360_profile(\"guest@example.com\")"
   description: "An MCP server that gives AI clients tools over Salesforce, NetSuite, Pardot, and OPERA PMS — composite lookups like a full guest 360, with write operations gated behind a token and OAuth for Claude Desktop."
 
+- name: "Loui"
+  repo: "https://github.com/francisphan/loui"
+  image: "/images/projects/loui.jpg"
+  image_alt: "Loui architecture: Claude Code, Claude Desktop and web, and Claude on the phone connect over MCP to a relay on your machine, which Loui, the browser, reaches over a WebSocket; each Claude session gets its own tab group, asks before first use, and can be taken over"
+  lang: "JavaScript"
+  lang_color: "#f1e05a"
+  kind: "Desktop browser"
+  prompt: "$"
+  cmd: "npm start"
+  description: "A desktop browser that Claude drives alongside you. Any Claude session, from Code, Desktop, web or phone, connects over MCP through a small self-hosted relay and works in a tab group of its own, after asking first. Watch it work, take over anytime; your own tabs stay off-limits."
+
 - name: "Cadencia"
   private: "Private repo"
   image: "/images/projects/cadencia.jpg"
