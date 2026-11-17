@@ -59,6 +59,17 @@
   cmd: "npm run dry-run"
   description: "Syncs hotel guest records from OPERA PMS's Oracle database into Salesforce. Duplicate detection by probability scoring across name, location, and stay dates; ships as a single executable running as a Windows service."
 
+- name: "opera-to-salesforce-sync"
+  repo: "https://github.com/francisphan/opera-to-salesforce-sync"
+  image: "/images/projects/opera-to-salesforce-sync.jpg"
+  image_alt: "opera-to-salesforce-sync architecture: OPERA PMS business events POST to a receiver Lambda's Function URL, which queues them in SQS with three retries and a dead-letter queue watched by a CloudWatch alarm; a processor Lambda reads credentials from Secrets Manager and creates Salesforce Accounts"
+  lang: "TypeScript"
+  lang_color: "#3178C6"
+  kind: "Serverless pipeline"
+  prompt: "$"
+  cmd: "sam build && sam deploy"
+  description: "Event-driven counterpart to the polling sync: OPERA business events hit a webhook Lambda, queue through SQS with retries and a dead-letter queue, and land in Salesforce."
+
 - name: "Sideout"
   repo: "https://github.com/francisphan/sideout"
   live: "https://francisphan.github.io/sideout/"
@@ -101,15 +112,6 @@
   prompt: "$"
   cmd: "npm run tauri:dev"
   description: "Cross-platform desktop app for managing wine inventory across multiple Vinoshipper producer accounts via CSV sync. React and TypeScript up front, a Rust backend behind Tauri, credentials kept in the OS keyring."
-
-- name: "opera-to-salesforce-sync"
-  repo: "https://github.com/francisphan/opera-to-salesforce-sync"
-  lang: "TypeScript"
-  lang_color: "#3178C6"
-  kind: "Serverless pipeline"
-  prompt: "$"
-  cmd: "sam build && sam deploy"
-  description: "Event-driven counterpart to the polling sync: OPERA business events hit a webhook Lambda, queue through SQS with retries and a dead-letter queue, and land in Salesforce."
 
 - name: "netsuite-shim"
   repo: "https://github.com/francisphan/netsuite-shim"
