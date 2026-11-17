@@ -62,7 +62,7 @@
 - name: "Sabueso"
   repo: "https://github.com/francisphan/Sabueso"
   image: "/images/projects/sabueso.jpg"
-  image_alt: "Sabueso architecture: twice a week it pulls arriving guests from Salesforce, researches each with Gemini search grounding, checks photos with Claude vision, and emails an HTML report through Gmail; separately, staff ask the Sabueso Slack bot, a Claude agent loop that calls agent-b's MCP tools for Salesforce, NetSuite and OPERA, with writes needing confirmation"
+  image_alt: "Sabueso, a bloodhound mascot in a red bandana, beside its architecture: twice a week it pulls arriving guests from Salesforce, researches each with Gemini search grounding, checks photos with Claude vision, and emails an HTML report through Gmail; separately, staff ask the Sabueso Slack bot, a Claude agent loop that calls agent-b's MCP tools for Salesforce, NetSuite and OPERA, with writes needing confirmation"
   lang: "Python"
   lang_color: "#3572A5"
   kind: "AI guest profiles"
