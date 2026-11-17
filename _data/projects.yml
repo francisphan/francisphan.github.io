@@ -6,7 +6,7 @@
 - name: "agent-b"
   repo: "https://github.com/francisphan/agent-b"
   image: "/images/projects/agent-b.jpg"
-  image_alt: "agent-b architecture: Claude Desktop and a Slack assistant connect to the agent-b MCP server (OAuth, token-gated writes, guest 360), which fans out to Salesforce, NetSuite, Pardot and OPERA PMS"
+  image_alt: "agent-b, shown by its mascot, a German shepherd secret agent in dark glasses: Claude Desktop and a Slack assistant connect to the agent-b MCP server (OAuth, token-gated writes, guest 360), which fans out to Salesforce, NetSuite, Pardot and OPERA PMS"
   lang: "Python"
   lang_color: "#3572A5"
   kind: "MCP server"
