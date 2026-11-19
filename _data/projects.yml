@@ -28,7 +28,7 @@
 - name: "Cadencia"
   private: "Private repo"
   image: "/images/projects/cadencia.jpg"
-  image_alt: "Cadencia's Rocks list for a simulated company: quarterly rocks grouped by owner, with Complete, On Track and Off Track statuses and milestone progress bars"
+  image_alt: "Cadencia's mascot, a white Dogo Argentino with a metronome, above its Rocks list for a simulated company: quarterly rocks grouped by owner, with Complete, On Track and Off Track statuses and milestone progress bars"
   lang: "TypeScript"
   lang_color: "#3178C6"
   kind: "Internal web app"
